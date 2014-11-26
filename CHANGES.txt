@@ -1,0 +1,18 @@
+For more information, check the README.md in http://github.com/i3visio/entify
+
+v0.3.0, 2014/10/14 -- Changes performed.
+	- Added new functionality of retrieving a web interface.
+	- Updated to use i3visiotools.
+
+v0.2.0, 2014/10/14 -- New regexp added.
+	- New regexp added: bitcoin address.
+
+v0.1.1, 2014/10/04 -- New regexp added.
+	- Minor bug mended during the install.
+
+v0.1.0, 2014/09/29 -- Initial release.
+	- Regexps added: MD5, email, IPv4, SHA1, SHA256, DNI.
+	- Exports to Json files.
+	- Allows recursive search on a folder.
+	- Verbosity included.
+
