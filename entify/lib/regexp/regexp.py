@@ -51,7 +51,7 @@ class RegexpObject():
 		# This is the tag of the regexp
 		self.name = name
 		# This is the string containing the reg_exp to be seeked
-		self.reg_exp = reg_exp
+		self.reg_exp = [reg_exp]
 
 		
 	def __str__(self):
@@ -113,7 +113,6 @@ class RegexpObject():
 		# verification
 		for t in temp:
 			# Remember: the regexps include two extra charactes (before and later) that should be removed now.
-			t = t[1:-1]
 			if self.isValidExp(t):
 				if t not in verifiedExp:
 					verifiedExp.append(t)

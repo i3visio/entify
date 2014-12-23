@@ -37,5 +37,5 @@ class SHA256(RegexpObject):
 		# This is the tag of the regexp
 		self.name = "i3visio.sha256"
 		# This is the string containing the reg_exp to be seeked
-		self.reg_exp = ["[^a-zA-Z1-9]([a-z0-9]{64}|[A-Z0-9]{64})[^a-zA-Z1-9]"]
+		self.reg_exp = ["[^a-zA-Z0-9]" + "([a-z0-9]{64}|[A-Z0-9]{64})" + "[^a-zA-Z0-9]"]
 		

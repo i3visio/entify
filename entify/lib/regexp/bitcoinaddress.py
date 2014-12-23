@@ -37,5 +37,5 @@ class BitcoinAddress(RegexpObject):
 		# This is the tag of the regexp
 		self.name = "i3visio.bitcoin.address"
 		# This is the string containing the reg_exp to be seeked
-		self.reg_exp = ["[^a-zA-Z1-9]" + "([13][a-km-zA-HJ-NP-Z1-9]{26,33})" + "[^a-zA-Z1-9]"]
+		self.reg_exp = ["[^a-zA-Z0-9]" + "([13][a-km-zA-HJ-NP-Z1-9]{26,33})" + "[^a-zA-Z0-9]"]
 		

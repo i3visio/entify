@@ -1,15 +1,12 @@
 	=============================================================
-	entify.py  Copyright (C) 2014  F. Brezo and Y. Rubio, i3visio
+	entify  Copyright (C) 2014  F. Brezo and Y. Rubio, i3visio
 	=============================================================
 
 Description:
 ============
-entify.py is a GPLv3 piece of software that looks for regular expressions in 
+entify is a GPLv3 piece of software that looks for regular expressions in 
 a series of files in a folder. It can also be imported by other modules to 
 look for entities in any kind of data.
-
-The supported regular expressions in v0.1.1 are:
-dni, email, md5, sha1, sha256, 
 
 License: GPLv3
 ==============
@@ -39,12 +36,17 @@ Installation:
 =============
 The installation under Python 2.7 for the release package Entify-v0.x.x is as follows:
 ```
-tar xvfz Entify-v0.x.x.tar.gz
+git clone http://github.com/i3visio/entify
+cd entify-master
+sudo python setup.py build
 sudo python setup.py install
 ```
 or
 ```
-unzip Entify-v0.x.x.zip
+wget http://github.com/i3visio/entify/archive/master.zip
+unzip master.zip
+cd master
+sudo python setup.py build
 sudo python setup.py install
 ```
 Superuser privileges are required so as to complete the installation. Afterwards, 
@@ -56,9 +58,9 @@ If no error is displayed, the installation would have been performed correctly.
 
 Usage:
 ======
-So as to run the program, navigate to Entify-v0.x.x/entify/ and run:
+So as to run the program, navigate to entify-master/entify/ and run:
 ```
-python entify.py -h
+python entify-launcher.py -h
 ```
 The usage is described as follows:
 ```

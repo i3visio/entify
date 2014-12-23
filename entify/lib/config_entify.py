@@ -32,6 +32,7 @@ from entify.lib.regexp.md5 import MD5
 from entify.lib.regexp.sha1 import SHA1
 from entify.lib.regexp.sha256 import SHA256
 from entify.lib.regexp.bitcoinaddress import BitcoinAddress
+from entify.lib.regexp.litecoinaddress import LitecoinAddress
 # Add any additional import here
 #from regexp.anynewregexp import AnyNewRegexp
 # <ADD_NEW_REGEXP_IMPORT_BELOW>
@@ -53,6 +54,7 @@ def getAllRegexp():
 	listAll.append(DNI())
 	listAll.append(Email())
 	listAll.append(IPv4())
+	listAll.append(LitecoinAddress())
 	listAll.append(MD5())
 	listAll.append(SHA1())
 	listAll.append(SHA256())

@@ -38,5 +38,5 @@ class IPv4(RegexpObject):
 		self.name = "i3visio.ipv4"
 		# This is the string containing the reg_exp to be seeked
 		#self.reg_exp = ["[^a-zA-Z0-9](25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d){3})[^a-zA-Z0-9]"]
-		self.reg_exp = ["[^a-zA-Z0-9][0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}[^a-zA-Z0-9]"]
+		self.reg_exp = ["[^a-zA-Z0-9]" + "([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})" + "[^a-zA-Z0-9]"]
 		

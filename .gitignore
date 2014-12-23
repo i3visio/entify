@@ -4,3 +4,5 @@ logs*
 _test*
 dist*
 build*
+*egg*
+*doc*
