@@ -1,5 +1,8 @@
 For more information, check the README.md in http://github.com/i3visio/entify
 
+v0.4.1, 2014/12/25 -- Updated the README and the installation instructions.
+    - Installation instructions updated.
+
 v0.4.0, 2014/12/23 -- Changes performed.
     - An issue on the extraction of the regular expressions was avoiding certain characters for certain entities.
     - Added Litecoin addresses regular expression.

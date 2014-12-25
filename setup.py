@@ -15,7 +15,7 @@ except ImportError:
 	read_md = lambda f: open(f, 'r').read()
 
 setup(	name="entify",
-	version="v0.4.0",
+	version="v0.4.1",
 	description="entify - entify is a program designed to extract using regular expressions all the entities from the files on different resources. This software also provides an interface to look for these entities in any given text.",
 	author="Felix Brezo and Yaiza Rubio",
 	author_email="contacto@i3visio.com",
