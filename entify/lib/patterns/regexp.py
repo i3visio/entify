@@ -116,7 +116,12 @@ class RegexpObject():
         '''
         temp = []
         for r in self.reg_exp:
-            temp += re.findall(r,  data)        
+            try:
+                temp += re.findall(r,  data)        
+            except:
+                print self.name
+                print r
+                print "CABOOOOM!"
     
         verifiedExp = []
         # verification
