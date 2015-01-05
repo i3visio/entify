@@ -90,9 +90,7 @@ class RegexpObject():
                 aux = {}
                 aux["type"] = self.name
                 aux["value"] = found
-                print aux
                 aux["attributes"] = self.getAttributes(found)
-                print aux
                 results.append(aux)
         return results
 

@@ -71,7 +71,7 @@ class URL(RegexpObject):
             aux = {}
             aux["type"] = "i3visio.domain"
             # Inserting the found domain
-            protocolRegExp = foundDomain[0]
+            aux["value"] = foundDomain[0]
             # Each attributes will be swept
             aux["attributes"] = []
             attributes.append(aux)
@@ -83,7 +83,7 @@ class URL(RegexpObject):
             aux = {}
             aux["type"] = "i3visio.port"
             # Inserting the found domain
-            protocolRegExp = foundPort[0]
+            aux["value"] = foundPort[0]
             # Each attributes will be swept
             aux["attributes"] = []
             attributes.append(aux)
