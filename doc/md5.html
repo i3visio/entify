@@ -1,0 +1,95 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module md5</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>md5</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/febre/Dropbox/_herramientas/dev_tools/entify/entify/lib/patterns/md5.py">/home/febre/Dropbox/_herramientas/dev_tools/entify/entify/lib/patterns/md5.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;cp1252&nbsp;-*-<br>
+#<br>
+##################################################################################<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;entify.<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;entify&nbsp;is&nbsp;free&nbsp;software:&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation,&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;program&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;along&nbsp;with&nbsp;this&nbsp;program.&nbsp;&nbsp;If&nbsp;not,&nbsp;see&nbsp;&lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.<br>
+#<br>
+##################################################################################</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="entify.lib.patterns.regexp.html#RegexpObject">entify.lib.patterns.regexp.RegexpObject</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="md5.html#MD5">MD5</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MD5">class <strong>MD5</strong></a>(<a href="entify.lib.patterns.regexp.html#RegexpObject">entify.lib.patterns.regexp.RegexpObject</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&lt;<a href="#MD5">MD5</a>&gt;&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MD5-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor&nbsp;without&nbsp;parameters.<br>
+Most&nbsp;of&nbsp;the&nbsp;times,&nbsp;this&nbsp;will&nbsp;be&nbsp;the&nbsp;ONLY&nbsp;method&nbsp;needed&nbsp;to&nbsp;be&nbsp;overwritten.<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;containing&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;regular&nbsp;expression.<br>
+:param&nbsp;reg_exp:&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;containing&nbsp;the&nbsp;regular&nbsp;expresion.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="entify.lib.patterns.regexp.html#RegexpObject">entify.lib.patterns.regexp.RegexpObject</a>:<br>
+<dl><dt><a name="MD5-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Function&nbsp;to&nbsp;obtain&nbsp;the&nbsp;text&nbsp;that&nbsp;represents&nbsp;this&nbsp;object.<br>
+&nbsp;<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;str(getJson())</tt></dd></dl>
+
+<dl><dt><a name="MD5-findExp"><strong>findExp</strong></a>(self, data)</dt><dd><tt>Method&nbsp;to&nbsp;look&nbsp;for&nbsp;the&nbsp;current&nbsp;regular&nbsp;expression&nbsp;in&nbsp;the&nbsp;provided&nbsp;string.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;containing&nbsp;the&nbsp;text&nbsp;where&nbsp;the&nbsp;expressions&nbsp;will&nbsp;be&nbsp;looked&nbsp;for.<br>
+&nbsp;<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;of&nbsp;verified&nbsp;regular&nbsp;expressions.</tt></dd></dl>
+
+<dl><dt><a name="MD5-getAttributes"><strong>getAttributes</strong></a>(self, foundExp)</dt><dd><tt>Method&nbsp;to&nbsp;extract&nbsp;additional&nbsp;attributes&nbsp;from&nbsp;a&nbsp;given&nbsp;expression&nbsp;(i.&nbsp;e.:&nbsp;domains&nbsp;and&nbsp;ports&nbsp;from&nbsp;URL&nbsp;and&nbsp;so&nbsp;on).&nbsp;This&nbsp;method&nbsp;may&nbsp;be&nbsp;overwritten&nbsp;in&nbsp;certain&nbsp;child&nbsp;classes.<br>
+:param&nbsp;found&nbsp;exp:&nbsp;&nbsp;&nbsp;expression&nbsp;to&nbsp;be&nbsp;processed.<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;output&nbsp;format&nbsp;will&nbsp;be&nbsp;like:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[{"type"&nbsp;:&nbsp;"i3visio.email",&nbsp;"value":&nbsp;"foo@bar.com",&nbsp;"attributes":&nbsp;[]&nbsp;},&nbsp;{"type"&nbsp;:&nbsp;"i3visio.email",&nbsp;"value":&nbsp;"bar@foo.com",&nbsp;"attributes":&nbsp;[]&nbsp;}]</tt></dd></dl>
+
+<dl><dt><a name="MD5-getResults"><strong>getResults</strong></a>(self, parFound<font color="#909090">=None</font>)</dt><dd><tt>Function&nbsp;to&nbsp;obtain&nbsp;the&nbsp;Dictionarythat&nbsp;represents&nbsp;this&nbsp;object.<br>
+&nbsp;<br>
+:param&nbsp;parFound:&nbsp;&nbsp;&nbsp;&nbsp;values&nbsp;to&nbsp;return.<br>
+&nbsp;<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;output&nbsp;format&nbsp;will&nbsp;be&nbsp;like:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[{"type"&nbsp;:&nbsp;"i3visio.email",&nbsp;"value":&nbsp;"foo@bar.com",&nbsp;"attributes":&nbsp;[]&nbsp;},&nbsp;{"type"&nbsp;:&nbsp;"i3visio.email",&nbsp;"value":&nbsp;"bar@foo.com",&nbsp;"attributes":&nbsp;[]&nbsp;}]</tt></dd></dl>
+
+<dl><dt><a name="MD5-isValidExp"><strong>isValidExp</strong></a>(self, exp)</dt><dd><tt>Method&nbsp;to&nbsp;verify&nbsp;if&nbsp;a&nbsp;given&nbsp;expression&nbsp;is&nbsp;correct&nbsp;just&nbsp;in&nbsp;case&nbsp;the&nbsp;used&nbsp;regular&nbsp;expression&nbsp;needs&nbsp;additional&nbsp;processing&nbsp;to&nbsp;verify&nbsp;it.<br>
+This&nbsp;method&nbsp;will&nbsp;be&nbsp;overwritten&nbsp;when&nbsp;necessary.<br>
+&nbsp;<br>
+:param&nbsp;exp:&nbsp;&nbsp;&nbsp;&nbsp;Expression&nbsp;to&nbsp;verify.<br>
+&nbsp;<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;|&nbsp;False</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

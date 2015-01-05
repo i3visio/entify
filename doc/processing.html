@@ -1,0 +1,107 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module processing</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>processing</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/febre/Dropbox/_herramientas/dev_tools/entify/entify/lib/processing.py">/home/febre/Dropbox/_herramientas/dev_tools/entify/entify/lib/processing.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;cp1252&nbsp;-*-<br>
+#<br>
+##################################################################################<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;entify.<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entify&nbsp;is&nbsp;free&nbsp;software:&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation,&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;program&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+#<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;along&nbsp;with&nbsp;this&nbsp;program.&nbsp;&nbsp;If&nbsp;not,&nbsp;see&nbsp;&lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.<br>
+#<br>
+##################################################################################</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="entify.lib.config_entify.html">entify.lib.config_entify</a><br>
+<a href="i3visiotools.general.html">i3visiotools.general</a><br>
+</td><td width="25%" valign=top><a href="i3visiotools.html">i3visiotools</a><br>
+<a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-entify_main"><strong>entify_main</strong></a>(args)</dt><dd><tt>Main&nbsp;function.&nbsp;This&nbsp;function&nbsp;is&nbsp;created&nbsp;in&nbsp;this&nbsp;way&nbsp;so&nbsp;as&nbsp;to&nbsp;let&nbsp;other&nbsp;applications&nbsp;make&nbsp;use&nbsp;of&nbsp;the&nbsp;full&nbsp;configuration&nbsp;capabilities&nbsp;of&nbsp;the&nbsp;application.</tt></dd></dl>
+ <dl><dt><a name="-getEntitiesByRegexp"><strong>getEntitiesByRegexp</strong></a>(data<font color="#909090">=None</font>, listRegexp<font color="#909090">=None</font>, verbosity<font color="#909090">=1</font>, logFolder<font color="#909090">='./logs'</font>)</dt><dd><tt>Method&nbsp;to&nbsp;obtain&nbsp;entities&nbsp;by&nbsp;Regexp.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;&nbsp;&nbsp;&nbsp;text&nbsp;where&nbsp;the&nbsp;entities&nbsp;will&nbsp;be&nbsp;looked&nbsp;for.<br>
+:param&nbsp;listRegexp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;selected&nbsp;regular&nbsp;expressions&nbsp;to&nbsp;be&nbsp;looked&nbsp;for.&nbsp;If&nbsp;None&nbsp;was&nbsp;provided,&nbsp;all&nbsp;the&nbsp;available&nbsp;will&nbsp;be&nbsp;chosen&nbsp;instead.<br>
+:param&nbsp;verbosity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verbosity&nbsp;level.<br>
+:param&nbsp;logFolder:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder&nbsp;to&nbsp;store&nbsp;the&nbsp;logs.<br>
+&nbsp;<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;available&nbsp;objects&nbsp;containing&nbsp;the&nbsp;expressions&nbsp;found&nbsp;in&nbsp;the&nbsp;provided&nbsp;data.<br>
+[<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attributes":&nbsp;[],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"i3visio.email",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"value":&nbsp;"foo@bar.com"<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attributes":&nbsp;[],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"i3visio.email",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"value":&nbsp;"bar@foo.com"<br>
+&nbsp;&nbsp;}<br>
+]</tt></dd></dl>
+ <dl><dt><a name="-listdir"><strong>listdir</strong></a>(...)</dt><dd><tt><a href="#-listdir">listdir</a>(path)&nbsp;-&gt;&nbsp;list_of_strings<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;names&nbsp;of&nbsp;the&nbsp;entries&nbsp;in&nbsp;the&nbsp;directory.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path:&nbsp;path&nbsp;of&nbsp;directory&nbsp;to&nbsp;list<br>
+&nbsp;<br>
+The&nbsp;list&nbsp;is&nbsp;in&nbsp;arbitrary&nbsp;order.&nbsp;&nbsp;It&nbsp;does&nbsp;not&nbsp;include&nbsp;the&nbsp;special<br>
+entries&nbsp;'.'&nbsp;and&nbsp;'..'&nbsp;even&nbsp;if&nbsp;they&nbsp;are&nbsp;present&nbsp;in&nbsp;the&nbsp;directory.</tt></dd></dl>
+ <dl><dt><a name="-scanFolderForRegexp"><strong>scanFolderForRegexp</strong></a>(folder<font color="#909090">=None</font>, listRegexp<font color="#909090">=None</font>, recursive<font color="#909090">=False</font>, verbosity<font color="#909090">=1</font>, logFolder<font color="#909090">='./logs'</font>)</dt><dd><tt>[Optionally]&nbsp;recursive&nbsp;method&nbsp;to&nbsp;scan&nbsp;the&nbsp;files&nbsp;in&nbsp;a&nbsp;given&nbsp;folder.<br>
+&nbsp;<br>
+:param&nbsp;folder:&nbsp;&nbsp;the&nbsp;folder&nbsp;to&nbsp;be&nbsp;scanned.<br>
+:param&nbsp;listRegexp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listRegexp&nbsp;is&nbsp;an&nbsp;array&nbsp;of&nbsp;&lt;RegexpObject&gt;.<br>
+:param&nbsp;recursive:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when&nbsp;True,&nbsp;it&nbsp;performs&nbsp;a&nbsp;recursive&nbsp;search&nbsp;on&nbsp;the&nbsp;subfolders.<br>
+&nbsp;<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;available&nbsp;objects&nbsp;containing&nbsp;the&nbsp;expressions&nbsp;found&nbsp;in&nbsp;the&nbsp;provided&nbsp;data.<br>
+[<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attributes":&nbsp;[],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"i3visio.email",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"value":&nbsp;"foo@bar.com"<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attributes":&nbsp;[],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"i3visio.email",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"value":&nbsp;"bar@foo.com"<br>
+&nbsp;&nbsp;}<br>
+]</tt></dd></dl>
+ <dl><dt><a name="-scanResource"><strong>scanResource</strong></a>(uri<font color="#909090">=None</font>, listRegexp<font color="#909090">=None</font>, verbosity<font color="#909090">=1</font>, logFolder<font color="#909090">='./logs'</font>)</dt><dd><tt>[Optionally]&nbsp;recursive&nbsp;method&nbsp;to&nbsp;scan&nbsp;the&nbsp;files&nbsp;in&nbsp;a&nbsp;given&nbsp;folder.<br>
+&nbsp;<br>
+:param&nbsp;uri:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;URI&nbsp;to&nbsp;be&nbsp;scanned.<br>
+:param&nbsp;listRegexp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listRegexp&nbsp;is&nbsp;an&nbsp;array&nbsp;of&nbsp;&lt;RegexpObject&gt;.<br>
+&nbsp;<br>
+:return:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;dictionary&nbsp;where&nbsp;the&nbsp;key&nbsp;is&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file.</tt></dd></dl>
+</td></tr></table>
+</body></html>
