@@ -33,6 +33,7 @@ from entify.lib.regexp.ipv4 import IPv4
 from entify.lib.regexp.litecoinaddress import LitecoinAddress
 from entify.lib.regexp.md5 import MD5
 from entify.lib.regexp.namecoinaddress import NamecoinAddress
+from entify.lib.regexp.peercoinaddress import PeercoinAddress
 from entify.lib.regexp.sha1 import SHA1
 from entify.lib.regexp.sha256 import SHA256
 from entify.lib.regexp.url import URL
