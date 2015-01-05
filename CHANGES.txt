@@ -6,7 +6,7 @@ v0.5.0, 2015/01/05 -- New cryptocurrencies added as well as URL.
     - The email entity now identifies emails in the forms: "foo[at]bar[dot]com", "foo [at] bar [dot] com", etc.
     - Fix a minor issue when setting the output folder and not providing an extension
     - Changed the name of the folder entify.lib.regexp to entify.lib.patterns to avoid confusion when importing.
-    - Added a basic API documentation folder with pydoc.
+    - Added a basic API documentation folder with pydoc, as well as a documentation generator.
     - An issue has been addressed regarding the license in some files.
 
 v0.4.1, 2014/12/25 -- Updated the README and the installation instructions.
