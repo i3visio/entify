@@ -39,14 +39,14 @@ class DNI(RegexpObject):
         # This is the string containing the reg_exp to be seeked
         self.reg_exp = ["[^a-zA-Z1-9]" + "[0-9]{7,8}[\-\ ]?[a-zA-Z]" +"[^a-zA-Z1-9]"]
         
-   def isValidExp(self, exp):
+    def isValidExp(self, exp):
         '''     
-                Method to verify if a given expression is correct just in case the used regular expression needs additional processing to verify this fact.$
-                This method will be overwritten when necessary.
+            Method to verify if a given expression is correct just in case the used regular expression needs additional processing to verify this fact.$
+            This method will be overwritten when necessary.
 
-                :param exp:     Expression to verify.
+            :param exp:     Expression to verify.
 
-                :return:        True | False
+            :return:        True | False
         '''
         # order of the letters depending on which is the mod of the number
         #         0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20   21   22   23
