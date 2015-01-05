@@ -40,7 +40,7 @@ if __name__ == "__main__":
 	# Adding the main options
 	# Defining the mutually exclusive group for the main options
 	groupInput = parser.add_mutually_exclusive_group(required=True)
-	groupInput.add_argument('-i', '--input_folder',  metavar='<path_to_input_folder>', default=None, action='store',  help='path to the file where the list of Classes is stored (one per line).')
+	groupInput.add_argument('-i', '--input_folder',  metavar='<path_to_input_folder>', default=None, action='store',  help='path to the folder to analyse.')
 	groupInput.add_argument('-w', '--web',  metavar='<url>',  action='store', default=None, help='URI to be recovered and analysed.')
 	
 	# adding the option

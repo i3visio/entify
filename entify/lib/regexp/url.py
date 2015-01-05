@@ -37,9 +37,9 @@ class URL(RegexpObject):
         # This is the tag of the regexp
         self.name = "i3visio.url"
         # This is the string containing the reg_exp to be seeked. The former and latter characters are not needed.
-        # This is not working because python is grabbing each parenthesis
-        #self.reg_exp = ["[^a-zA-Z0-9]" + "((https?|s?ftp|file)?://[a-zA-Z0-9\_\.\-]+(:[0-9]{1,5})?(/[a-zA-Z0-9\_\.\-/=\?&]+)?)" + "[^a-zA-Z0-9]"]
-        self.reg_exp = ["[^a-zA-Z0-9]" + "((?:https?|s?ftp|file)://[a-zA-Z0-9\_\.\-]+(?:\:[0-9]{1,5})(?:/[a-zA-Z0-9\_\.\-/=\?&]+))" + "[^a-zA-Z0-9]"]
+        #self.reg_exp = ["((?:https?|s?ftp|file)://[a-zA-Z0-9\_\.\-]+(?:\:[0-9]{1,5})(?:/[a-zA-Z0-9\_\.\-/=\?&]+))"]
+        self.reg_exp = ["((?:https?|s?ftp|file)://[a-zA-Z0-9\_\.\-]+(?:\:[0-9]{1,5}|)(?:/[a-zA-Z0-9\_\.\-/=\?&]+|))"]
+        #self.reg_exp = ["((?:https?|s?ftp|file)://[a-zA-Z0-9\_\.\-]+(?:/[a-zA-Z0-9\_\.\-/=\?&%]+))"]
 
     def getAttributes(self, foundExp):
         '''
@@ -51,20 +51,19 @@ class URL(RegexpObject):
         # Defining a dictionary
         attributes = []
         
-        
-        protocolRegExp = "((https?|s?ftp|file))://"
+        protocolRegExp = "((?:https?|s?ftp|file))://"
         foundProtocol = re.findall(protocolRegExp, foundExp)
         if len(foundProtocol) > 0:        
             # Defining a protocol element
             aux = {}
             aux["type"] = "i3visio.protocol"
             # Defining the regular expression to extract the protocol from a URL
-            aux["value"] = foundProtocol[0][0]
+            aux["value"] = foundProtocol[0]
             # Each attributes will be swept
             aux["attributes"] = []
             attributes.append(aux)
 
-        domainRegExp = "(https?|s?ftp)://([a-zA-Z0-9\_\.\-]+)(:|/)"
+        domainRegExp = "(?:https?|s?ftp)://([a-zA-Z0-9\_\.\-]+)(?:\:|/)"
         foundDomain = re.findall(domainRegExp, foundExp)
         if len(foundDomain) > 0:
             # Defining a domain element
@@ -76,9 +75,9 @@ class URL(RegexpObject):
             aux["attributes"] = []
             attributes.append(aux)
 
-        portRegExp = "(https?|s?ftp)://[a-zA-Z0-9\_\.\-]+:([0-9]{1,5})/"
+        portRegExp = "(?:https?|s?ftp)://[a-zA-Z0-9\_\.\-]+:([0-9]{1,5})/"
         foundPort = re.findall(portRegExp, foundExp)
-        if len(foundDomain) > 0:
+        if len(foundPort) > 0:
             # Defining a domain element
             aux = {}
             aux["type"] = "i3visio.port"
@@ -88,7 +87,6 @@ class URL(RegexpObject):
             aux["attributes"] = []
             attributes.append(aux)
 
-        
         return attributes
 
         
