@@ -45,7 +45,7 @@ if __name__ == "__main__":
 	
 	# adding the option
 	groupProcessing = parser.add_argument_group('Processing arguments', 'Configuring the processing parameters.')
-	groupProcessing.add_argument('-e', '--extension', metavar='<sum_ext>', nargs='+', choices=['json'], required=False, action='store', help='output extension for the summary files (at least one is required).')
+	groupProcessing.add_argument('-e', '--extension', metavar='<sum_ext>', nargs='+', choices=['json'], required=False, default = ['json'], action='store', help='output extension for the summary files (if not provided, json is assumed).')
 	groupProcessing.add_argument('-o', '--output_folder',  metavar='<path_to_output_folder>',  action='store', help='path to the output folder where the results will be stored.', required=False)
 	groupProcessing.add_argument('--recursive', action='store_true', default=False, required=False, help='Variable to tell the system to perform a recursive search on the folder tree.')	
 	groupProcessing.add_argument('-v', '--verbose', metavar='<verbosity>', choices=[0, 1, 2], required=False, action='store', default=1, help='select the verbosity level: 0 - none; 1 - normal (default); 2 - debug.', type=int)

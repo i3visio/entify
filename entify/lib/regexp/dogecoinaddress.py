@@ -2,9 +2,9 @@
 #
 ##################################################################################
 #
-#	This file is part of entify.py.
+#	This file is part of entify.
 #
-#	Usufy is free software: you can redistribute it and/or modify
+#	entify is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
 #	the Free Software Foundation, either version 3 of the License, or
 #	(at your option) any later version.
@@ -22,9 +22,9 @@
 
 from regexp import RegexpObject
 
-class LitecoinAddress(RegexpObject):
+class DogecoinAddress(RegexpObject):
 	''' 
-		<LitecoinAddress> class.
+		<DogecoinAddress> class.
 	'''
 	def __init__(self):
 		''' 
@@ -35,7 +35,7 @@ class LitecoinAddress(RegexpObject):
 			:param reg_exp:	string containing the regular expresion.
 		'''
 		# This is the tag of the regexp
-		self.name = "i3visio.litecoin.address"
+		self.name = "i3visio.dogecoin.address"
 		# This is the string containing the reg_exp to be seeked
-		self.reg_exp = ["[^a-zA-Z0-9]" + "(L[a-km-zA-HJ-NP-Z1-9]{32})" + "[^a-zA-Z0-9]"]
+		self.reg_exp = ["[^a-zA-Z0-9]" + "(D[a-km-zA-HJ-NP-Z1-9]{33})" + "[^a-zA-Z0-9]"]
 		

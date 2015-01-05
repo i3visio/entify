@@ -2,9 +2,9 @@
 #
 ##################################################################################
 #
-#	This file is part of entify.py.
+#	This file is part of entify.
 #
-#	Usufy is free software: you can redistribute it and/or modify
+#	entify is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
 #	the Free Software Foundation, either version 3 of the License, or
 #	(at your option) any later version.
@@ -24,7 +24,11 @@ from regexp import RegexpObject
 
 class Email(RegexpObject):
 	''' 
-		<Email> class.
+		<Email> class. It identifies emails that include:
+		    foo@bar.com
+		    foo[at]bar[dot]com
+		    foo[arroba]bar[punto]com
+		    foo [at] bar [dot] com
 	'''
 	def __init__(self):
 		''' 
@@ -37,6 +41,6 @@ class Email(RegexpObject):
 		# This is the tag of the regexp
 		self.name = "i3visio.email"
 		# This is the string containing the reg_exp to be seeked
-		self.reg_exp = ["[^a-zA-Z0-9]" + "([a-zA-Z0-9\.\-_]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]+)" + "[^a-zA-Z0-9]"]
+		self.reg_exp = ["[^a-zA-Z0-9]" + "([a-zA-Z0-9\.\-_]+(@| ?(\[(arroba|at)\] ?)[a-zA-Z0-9\.\-]+(\.| ?(\[(punto|dot)\] ?)[a-zA-Z]+)" + "[^a-zA-Z0-9]"]
 
 		

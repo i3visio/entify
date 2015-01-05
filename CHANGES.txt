@@ -1,5 +1,12 @@
 For more information, check the README.md in http://github.com/i3visio/entify
 
+v0.5.0, 2015/01/05 -- New cryptocurrencies added as well as URL.
+    - Regexps added for cryptocurrencies: DogecoinAddress, NamecoinAddress, PeercoinAddress.
+    - Regexps added for URL processing, including URL extraction, domain, protocol and port.
+    - The email entity now identifies emails in the forms: "foo[at]bar[dot]com", "foo [at] bar [dot] com", etc.
+    - Fix a minor issue when setting the output folder and not providing an extension
+    - An issue has been addressed regarding the license in some files.
+
 v0.4.1, 2014/12/25 -- Updated the README and the installation instructions.
     - Installation instructions updated.
 

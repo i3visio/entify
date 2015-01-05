@@ -61,6 +61,15 @@ class RegexpObject():
 			:return:	str(self.getJson())
 		'''
 		return str(self.getResults())
+
+    def getAttributes(self, foundExp):
+        '''
+            Method to extract additional attributes from a given expression (i. e.: domains and ports from URL and so on). This method may be overwritten in certain child classes.
+            :param found exp:   expression to be processed.
+			:return:	The output format will be like:
+				[{"type" : "i3visio.email", "value": "foo@bar.com", "attributes": [] }, {"type" : "i3visio.email", "value": "bar@foo.com", "attributes": [] }]
+        '''
+        return []
 		
 	def getResults(self, parFound = None):
 		''' 
@@ -69,7 +78,7 @@ class RegexpObject():
 			:param parFound:	values to return.
 
 			:return:	The output format will be like:
-				{"email" : {"reg_exp" : "[a-zA-Z0-9\.\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]+" , "found_exp" : ["foo@bar.com", "bar@foo.com"] } }
+				[{"type" : "i3visio.email", "value": "foo@bar.com", "attributes": [] }, {"type" : "i3visio.email", "value": "bar@foo.com", "attributes": [] }]
 		'''
 		# Defining a dictionary
 		results = []
@@ -81,7 +90,7 @@ class RegexpObject():
 				aux = {}
 				aux["type"] = self.name
 				aux["value"] = found
-				aux["attributes"] = []
+				aux["attributes"] = self.getAttributes(found)
 				results.append(aux)
 		return results
 

@@ -1,5 +1,0 @@
-recursive-include doc
-include README.md
-include MANIFEST
-include COPYING
-include ez_setup.py
