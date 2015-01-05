@@ -20,11 +20,11 @@
 ##################################################################################
 
 
-from regexp import RegexpObject
+from entify.lib.patterns.regexp import RegexpObject
 
-class PeercoinAddress(RegexpObject):
+class MD5(RegexpObject):
     ''' 
-        <PeercoinAddress> class.
+        <MD5> class.
     '''
     def __init__(self):
         ''' 
@@ -35,7 +35,7 @@ class PeercoinAddress(RegexpObject):
             :param reg_exp:    string containing the regular expresion.
         '''
         # This is the tag of the regexp
-        self.name = "i3visio.peercoin.address"
+        self.name = "i3visio.md5"
         # This is the string containing the reg_exp to be seeked
-        self.reg_exp = ["[^a-zA-Z0-9]" + "(P[a-km-zA-HJ-NP-Z1-9]{33})" + "[^a-zA-Z0-9]"]
+        self.reg_exp = ["[^a-zA-Z0-9]" + "([a-z0-9]{32}|[A-Z0-9]{32})" + "[^a-zA-Z0-9]"]
         

@@ -20,11 +20,11 @@
 ##################################################################################
 
 
-from regexp import RegexpObject
+from entify.lib.patterns.regexp import RegexpObject
 
-class MD5(RegexpObject):
+class SHA1(RegexpObject):
     ''' 
-        <MD5> class.
+        <SHA1> class.
     '''
     def __init__(self):
         ''' 
@@ -35,7 +35,7 @@ class MD5(RegexpObject):
             :param reg_exp:    string containing the regular expresion.
         '''
         # This is the tag of the regexp
-        self.name = "i3visio.md5"
+        self.name = "i3visio.sha1"
         # This is the string containing the reg_exp to be seeked
-        self.reg_exp = ["[^a-zA-Z0-9]" + "([a-z0-9]{32}|[A-Z0-9]{32})" + "[^a-zA-Z0-9]"]
+        self.reg_exp = ["[^a-zA-Z0-9]" + "([a-z0-9]{40}|[A-Z0-9]{40})" + "[^a-zA-Z0-9]"]
         

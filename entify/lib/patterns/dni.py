@@ -20,7 +20,7 @@
 ##################################################################################
 
 
-from regexp import RegexpObject
+from entify.lib.patterns.regexp import RegexpObject
 
 class DNI(RegexpObject):
     ''' 

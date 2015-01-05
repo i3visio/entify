@@ -20,11 +20,11 @@
 ##################################################################################
 
 
-from regexp import RegexpObject
+from entify.lib.patterns.regexp import RegexpObject
 
-class BitcoinAddress(RegexpObject):
+class SHA256(RegexpObject):
     ''' 
-        <BitcoinAddress> class.
+        <SHA256> class.
     '''
     def __init__(self):
         ''' 
@@ -35,7 +35,7 @@ class BitcoinAddress(RegexpObject):
             :param reg_exp:    string containing the regular expresion.
         '''
         # This is the tag of the regexp
-        self.name = "i3visio.bitcoin.address"
+        self.name = "i3visio.sha256"
         # This is the string containing the reg_exp to be seeked
-        self.reg_exp = ["[^a-zA-Z0-9]" + "([13][a-km-zA-HJ-NP-Z1-9]{26,33})" + "[^a-zA-Z0-9]"]
+        self.reg_exp = ["[^a-zA-Z0-9]" + "([a-z0-9]{64}|[A-Z0-9]{64})" + "[^a-zA-Z0-9]"]
         

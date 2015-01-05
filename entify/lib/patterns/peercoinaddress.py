@@ -20,11 +20,11 @@
 ##################################################################################
 
 
-from regexp import RegexpObject
+from entify.lib.patterns.regexp import RegexpObject
 
-class IPv4(RegexpObject):
+class PeercoinAddress(RegexpObject):
     ''' 
-        <IPv4> class.
+        <PeercoinAddress> class.
     '''
     def __init__(self):
         ''' 
@@ -35,8 +35,7 @@ class IPv4(RegexpObject):
             :param reg_exp:    string containing the regular expresion.
         '''
         # This is the tag of the regexp
-        self.name = "i3visio.ipv4"
+        self.name = "i3visio.peercoin.address"
         # This is the string containing the reg_exp to be seeked
-        #self.reg_exp = ["[^a-zA-Z0-9](25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d){3})[^a-zA-Z0-9]"]
-        self.reg_exp = ["[^a-zA-Z0-9]" + "([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})" + "[^a-zA-Z0-9]"]
+        self.reg_exp = ["[^a-zA-Z0-9]" + "(P[a-km-zA-HJ-NP-Z1-9]{33})" + "[^a-zA-Z0-9]"]
         

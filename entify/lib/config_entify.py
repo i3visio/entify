@@ -25,18 +25,18 @@ import logging
 # Importing Classes of <RegexpObject> objects that will be used in the script. The files are stored in the regexp folder.
 # For demo only
 #from regexp.demo import Demo
-from entify.lib.regexp.bitcoinaddress import BitcoinAddress
-from entify.lib.regexp.dni import DNI
-from entify.lib.regexp.dogecoinaddress import DogecoinAddress
-from entify.lib.regexp.email import Email
-from entify.lib.regexp.ipv4 import IPv4
-from entify.lib.regexp.litecoinaddress import LitecoinAddress
-from entify.lib.regexp.md5 import MD5
-from entify.lib.regexp.namecoinaddress import NamecoinAddress
-from entify.lib.regexp.peercoinaddress import PeercoinAddress
-from entify.lib.regexp.sha1 import SHA1
-from entify.lib.regexp.sha256 import SHA256
-from entify.lib.regexp.url import URL
+from entify.lib.patterns.bitcoinaddress import BitcoinAddress
+from entify.lib.patterns.dni import DNI
+from entify.lib.patterns.dogecoinaddress import DogecoinAddress
+from entify.lib.patterns.email import Email
+from entify.lib.patterns.ipv4 import IPv4
+from entify.lib.patterns.litecoinaddress import LitecoinAddress
+from entify.lib.patterns.md5 import MD5
+from entify.lib.patterns.namecoinaddress import NamecoinAddress
+from entify.lib.patterns.peercoinaddress import PeercoinAddress
+from entify.lib.patterns.sha1 import SHA1
+from entify.lib.patterns.sha256 import SHA256
+from entify.lib.patterns.url import URL
 # Add any additional import here
 #from regexp.anynewregexp import AnyNewRegexp
 # <ADD_NEW_REGEXP_IMPORT_BELOW>

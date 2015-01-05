@@ -20,11 +20,11 @@
 ##################################################################################
 
 
-from regexp import RegexpObject
+from entify.lib.patterns.regexp import RegexpObject
 
-class SHA256(RegexpObject):
+class DogecoinAddress(RegexpObject):
     ''' 
-        <SHA256> class.
+        <DogecoinAddress> class.
     '''
     def __init__(self):
         ''' 
@@ -35,7 +35,7 @@ class SHA256(RegexpObject):
             :param reg_exp:    string containing the regular expresion.
         '''
         # This is the tag of the regexp
-        self.name = "i3visio.sha256"
+        self.name = "i3visio.dogecoin.address"
         # This is the string containing the reg_exp to be seeked
-        self.reg_exp = ["[^a-zA-Z0-9]" + "([a-z0-9]{64}|[A-Z0-9]{64})" + "[^a-zA-Z0-9]"]
+        self.reg_exp = ["[^a-zA-Z0-9]" + "(D[a-km-zA-HJ-NP-Z1-9]{33})" + "[^a-zA-Z0-9]"]
         

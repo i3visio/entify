@@ -20,11 +20,11 @@
 ##################################################################################
 
 
-from regexp import RegexpObject
+from entify.lib.patterns.regexp import RegexpObject
 
-class LitecoinAddress(RegexpObject):
+class NamecoinAddress(RegexpObject):
     ''' 
-        <LitecoinAddress> class.
+        <NamecoinAddress> class.
     '''
     def __init__(self):
         ''' 
@@ -35,7 +35,7 @@ class LitecoinAddress(RegexpObject):
             :param reg_exp:    string containing the regular expresion.
         '''
         # This is the tag of the regexp
-        self.name = "i3visio.litecoin.address"
+        self.name = "i3visio.namecoin.address"
         # This is the string containing the reg_exp to be seeked
-        self.reg_exp = ["[^a-zA-Z0-9]" + "(L[a-km-zA-HJ-NP-Z1-9]{32})" + "[^a-zA-Z0-9]"]
+        self.reg_exp = ["[^a-zA-Z0-9]" + "([N][a-km-zA-HJ-NP-Z1-9]{26,33})" + "[^a-zA-Z0-9]"]
         

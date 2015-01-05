@@ -22,4 +22,4 @@
 import i3visiotools.logger
 
 # Calling the logger when being imported
-i3visiotools.logger.setupLogger(loggerName="entify.lib.regexp")
+i3visiotools.logger.setupLogger(loggerName="entify.lib.patterns")
