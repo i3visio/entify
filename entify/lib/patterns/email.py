@@ -41,6 +41,6 @@ class Email(RegexpObject):
 		# This is the tag of the regexp
 		self.name = "i3visio.email"
 		# This is the string containing the reg_exp to be seeked
-		self.reg_exp = ["[^a-zA-Z0-9]" + "([a-zA-Z0-9\.\-_]+(@| ?(\[(arroba|at)\] ?)[a-zA-Z0-9\.\-]+(\.| ?(\[(punto|dot)\] ?)[a-zA-Z]+)" + "[^a-zA-Z0-9]"]
+		self.reg_exp = ["([a-zA-Z0-9\.\-_]+(?:@| ?\[(?:arroba|at)\] ?)[a-zA-Z0-9\.\-]+(?:\.| ?\[(?:punto|dot)\] ?)[a-zA-Z]+)"]
 
 		
