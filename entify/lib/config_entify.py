@@ -28,7 +28,6 @@ import logging
 from entify.lib.regexp.bitcoinaddress import BitcoinAddress
 from entify.lib.regexp.dni import DNI
 from entify.lib.regexp.dogecoinaddress import DogecoinAddress
-from entify.lib.regexp.domain import Domain
 from entify.lib.regexp.email import Email
 from entify.lib.regexp.ipv4 import IPv4
 from entify.lib.regexp.litecoinaddress import LitecoinAddress
@@ -56,8 +55,7 @@ def getAllRegexp():
     #listAll.append(Demo())
     listAll.append(BitcoinAddress())
     listAll.append(DNI())
-    listAll.append(DogecoinAddress())    
-    listAll.append(Domain())        
+    listAll.append(DogecoinAddress())         
     listAll.append(Email())
     listAll.append(IPv4())
     listAll.append(LitecoinAddress())
